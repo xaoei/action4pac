@@ -23,7 +23,7 @@ jobs:
           repository: gfwlist/gfwlist
           path: gfwlist
 
-      - uses: xaoei/action4pac
+      - uses: xaoei/action4pac@master
         with:
           path: .
 
