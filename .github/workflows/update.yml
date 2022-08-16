@@ -31,9 +31,11 @@ jobs:
         run: |
           set -x
 
-          python main.py -p "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;" -i gfwlist/gfwlist.txt -f holly.js
+          python main.py -p "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;" -i gfwlist/gfwlist.txt -f holly.pac
+          python main.py -p "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;" -i gfwlist/gfwlist.txt -f holly_precise.pac --precise
 
-          git add holly.js
+          git add holly.pac
+          git add holly_precise.pac
           git commit -m ":sparkles:[$(LANG=C date)] auto update" || exit 0
 
           [ -n "${{ secrets.READ_ONLY }}" ] && git show && exit 0
