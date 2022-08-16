@@ -1,0 +1,41 @@
+name: Auto update
+
+on:
+  schedule:
+    - cron: '20 10 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install packages
+        run: |
+          sudo apt-get install openssh-client python3-setuptools
+
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v3
+        with:
+          repository: gfwlist/gfwlist
+          path: gfwlist
+
+      - uses: xaoei/action4pac
+        with:
+          path: .
+
+      - name: Update
+        run: |
+          set -x
+
+          python main.py -p "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;" -i gfwlist/gfwlist.txt -f holly.pac
+
+          git add holly.pac
+          git commit -m "[$(LANG=C date)] auto update" || exit 0
+
+          [ -n "${{ secrets.READ_ONLY }}" ] && git show && exit 0
+
+          git push origin master
