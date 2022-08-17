@@ -4882,6 +4882,7 @@ var rules = [
   ".pastie.org",
   "||pastie.org",
   "||blog.pathtosharepoint.com",
+  "||patreon.com",
   "pbs.org/wgbh/pages/frontline/tankman",
   "pbs.org/wgbh/pages/frontline/tibet",
   "video.pbs.org",

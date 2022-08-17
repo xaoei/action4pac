@@ -3544,6 +3544,7 @@ var domains = {
   "pastebin.com": 1,
   "pastie.org": 1,
   "pathtosharepoint.com": 1,
+  "patreon.com": 1,
   "paxful.com": 1,
   "pbs.org": 1,
   "pbwiki.com": 1,
