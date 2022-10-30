@@ -2616,6 +2616,7 @@ var domains = {
   "juoaa.com": 1,
   "justdied.com": 1,
   "justfreevpn.com": 1,
+  "justhost.ru": 1,
   "justicefortenzin.org": 1,
   "justmysocks1.net": 1,
   "justpaste.it": 1,

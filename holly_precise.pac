@@ -3938,6 +3938,7 @@ var rules = [
   ".juoaa.com",
   "|http://juoaa.com",
   "justfreevpn.com",
+  "||justhost.ru",
   ".justicefortenzin.org",
   "justpaste.it",
   "||justmysocks1.net",
