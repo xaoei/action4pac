@@ -1389,6 +1389,7 @@ var rules = [
   "||advanscene.com",
   "||advertfan.com",
   ".ae.org",
+  "||aei.org",
   "||aenhancers.com",
   "||af.mil",
   ".afantibbs.com",
